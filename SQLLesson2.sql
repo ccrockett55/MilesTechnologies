@@ -17,13 +17,14 @@ Insert Into Guest Values
 
 Create Table Roles
 (RoleId int not null,
-Name varchar(50)
+Name varchar(50),
+Level varchar(50)
 );
 
 Insert Into Roles Values
-(1, 'President'),
-(2, 'Vice President'),
-(3, 'Secretary');
+(1, 'President', 'Admin'),
+(2, 'Vice President', 'Admin'),
+(3, 'Secretary', 'Non-Admin');
 
 Select Guest.*, Roles.Name
 From Guest
